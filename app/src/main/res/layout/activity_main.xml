@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <ImageView
+
+        android:id="@+id/memeView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/shareMeme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/shareMeme"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="20dp"
+        android:text="SHARE"
+        android:onClick="shareclick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/nextMeme"
+        android:onClick="nextMemeclick"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="20dp"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/shareMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/memeView"
+        app:layout_constraintEnd_toEndOf="@+id/memeView"
+        app:layout_constraintStart_toStartOf="@+id/memeView"
+        app:layout_constraintBottom_toBottomOf="@+id/memeView"
+        android:id="@+id/progress"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
